@@ -21,7 +21,26 @@ def initial_state():
 def player(board):
     """
     Returns player who has the next turn on a board.
+
+    The player function should take a board state as input, and return which player’s turn it is (either X or O).
+    In the initial game state, X gets the first move. Subsequently, the player alternates with each additional move.
+    Any return value is acceptable if a terminal board is provided as input (i.e., the game is already over).
     """
+
+    if any(None in row for row in board):
+        XCount = sum(row.count("X") for row in board)
+        OCount = sum(row.count("O") for row in board)
+
+        if XCount == OCount:
+            return "X"
+        else: 
+            return "O"
+    
+    else: 
+        return
+
+
+        
     raise NotImplementedError
 
 
