@@ -3,7 +3,8 @@ Tic Tac Toe Player
 """
 
 import math
-import copy
+import copy 
+#Copy Module: gives access to deep copy and copy operations
 
 X = "X"
 O = "O"
@@ -50,7 +51,6 @@ def actions(board):
             if board[i][j] == EMPTY:
                 x.add((i,j))
     return x
-
 
 
 def result(board, action):
